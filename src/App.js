@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import LeftSide from './components/LeftSide';
 import RightSide from './components/RightSide';
 import Middle from './components/Middle';
@@ -23,12 +24,21 @@ function App() {
 			light: '#fafafa',
 		},
 	};
+	const [active, setActive] = useState(0);
+	const changeActive = (num) => {
+		console.log(num);
+		setActive(num);
+	};
 	return (
 		<div className='App'>
 			<div className='flex flex-col md:flex-row '>
 				<LeftSide theme={theme} />
-				<Middle theme={theme} />
-				<RightSide theme={theme} />
+				<Middle theme={theme} active={active} />
+				<RightSide
+					theme={theme}
+					setActive={setActive}
+					active={active}
+				/>
 			</div>
 		</div>
 	);

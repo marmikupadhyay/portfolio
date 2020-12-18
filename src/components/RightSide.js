@@ -16,32 +16,91 @@ function RightSide(props) {
 			// top: '50%',
 		},
 	};
+	const listStyle = 'nav-item list-none py-2 ';
 	return (
 		<div
 			style={styles.body}
 			className='h-screen w-full md:flex md:w-1/4 overflow-hidden bg-gray-800 shadow-md flex flex-row relative'>
 			<div className='w-1/2 relative'>
-				<div className='nav-bar absolute text-2xl pl-0'>
+				<div className='nav-bar absolute text-2xl pl-16'>
 					<ul className=''>
-						<li className='nav-item active list-none py-2'>
-							<a href='' className=''>
+						<li
+							className={
+								listStyle + (props.active == 0 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(0);
+								}}>
 								About Me
 							</a>
 						</li>
-						<li className='nav-item list-none py-2'>
-							<a href=''> Skills</a>
+						<li
+							className={
+								listStyle + (props.active == 1 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(1);
+								}}>
+								Skills
+							</a>
 						</li>
-						<li className='nav-item list-none py-2'>
-							<a href=''> Work</a>
+						<li
+							className={
+								listStyle + (props.active == 2 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(2);
+								}}>
+								Work
+							</a>
 						</li>
-						<li className='nav-item list-none py-2'>
-							<a href=''> Experience</a>
+						<li
+							className={
+								listStyle + (props.active == 3 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(3);
+								}}>
+								Experience
+							</a>
 						</li>
-						<li className='nav-item list-none py-2'>
-							<a href=''> Achivements</a>
+						<li
+							className={
+								listStyle + (props.active == 4 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(4);
+								}}>
+								Achivements
+							</a>
 						</li>
-						<li className='nav-item list-none py-2'>
-							<a href=''> Get In Touch</a>
+						<li
+							className={
+								listStyle + (props.active == 5 ? 'active' : '')
+							}>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									props.setActive(5);
+								}}>
+								Get In Touch
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -64,7 +123,7 @@ function RightSide(props) {
 					<a
 						href='https://github.com/marmikupadhyay'
 						className='github'>
-						<i className='fa fa-github'></i>
+						<i className='fab fa-github'></i>
 					</a>
 					<a
 						href='mailto:marmikupadhyay.mu@gmail.com'
@@ -74,12 +133,12 @@ function RightSide(props) {
 					<a
 						href='https://www.linkedin.com/in/marmik-upadhyay-8657bb1b5/'
 						className='linkedin'>
-						<i className='fa fa-linkedin'></i>
+						<i className='fab fa-linkedin-in'></i>
 					</a>
 					<a
 						href='https://www.instagram.com/_marmik_07/'
 						className='instagram'>
-						<i className='fa fa-instagram'></i>
+						<i className='fab fa-instagram'></i>
 					</a>
 				</div>
 			</div>

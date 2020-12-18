@@ -8,7 +8,10 @@
 
 .nav-bar ul li a,
 .nav-bar ul li a:after,
-.nav-bar ul li a:before {
+.nav-bar ul li a:before,
+.icon-bar a,
+.icon-bar a:before,
+.icon-bar a:after {
 	transition: all 0.5s;
 }
 
@@ -60,9 +63,27 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.svg-blob {
-	margin: auto;
+
+.icon-bar a:after {
 	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	bottom: 10px;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	background: #8d1bd4;
+	height: 3px;
+	margin: auto;
+}
+.icon-bar a:hover:after {
+	width: 75%;
+}
+
+.svg-blob {
+	position: absolute;
+	margin: auto;
 	top: 50%;
 	left: 50%;
 	transform: translate(-10%, -50%);
@@ -78,26 +99,20 @@
 	filter: drop-shadow(2px 1px 2px #4444dd);
 }
 
-/* Style the social media icons with color, if you want */
-.icon-bar a:hover {
-	/* transform: scale(1.1); */
+.svg-about {
+	/* position: absolute;
+	margin: auto;
+	top: -10vh;
+	left: 5%; */
+	transform: scaleX(1.6) rotate(-35deg);
+	z-index: 0;
 }
 
-/* .instagram {
-	background: white;
-	color: red !important;
+.wrapper {
 }
 
-.google {
-	background: #dd4b39;
-	color: white;
+.info-box {
+	/* position: absolute;
+	margin: auto;
+	top: 16vh; */
 }
-
-.github {
-	background: #24292e;
-}
-
-.linkedin {
-	background: #007bb5;
-	color: white;
-} */

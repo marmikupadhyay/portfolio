@@ -116,3 +116,55 @@
 	margin: auto;
 	top: 16vh; */
 }
+
+.repo,
+.btn {
+	transition: 0.4s;
+}
+
+.repo:hover,
+.btn:hover {
+	transform: scale(1.05);
+}
+
+.work-link {
+	transition: ease-in-out 0.4s;
+}
+.work-link:hover {
+	transform: scale(1.05);
+}
+
+.project-card {
+	width: 48%;
+}
+
+.certis .sub-head:after {
+	content: '';
+	left: 0%;
+	bottom: 0;
+	position: absolute;
+	width: 150px;
+	height: 2px;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#9360d4),
+		color-stop(70%, #6dd570)
+	);
+	background: -webkit-linear-gradient(left, #9360d4, #6dd570 70%);
+	background: -o-linear-gradient(left, #9360d4, #6dd570 70%);
+	background: linear-gradient(to right, #9360d4, #6dd570 70%);
+}
+
+@media only screen and (max-width: 767px) {
+	.project-card {
+		width: 100%;
+	}
+	.left-side,
+	.middle,
+	.right-side {
+		position: relative;
+		margin-left: 0 !important;
+	}
+}

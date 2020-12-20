@@ -8,6 +8,7 @@ function RightSide(props) {
 			background: theme.background.dark.primary,
 			color: theme.accent.secondary,
 			fontFamiliy: 'Roboto',
+			marginLeft: '75%',
 		},
 		iconBar: {
 			color: theme.accent.primary,
@@ -20,7 +21,7 @@ function RightSide(props) {
 	return (
 		<div
 			style={styles.body}
-			className='h-screen w-full md:flex md:w-1/4 overflow-hidden bg-gray-800 shadow-md flex flex-row relative'>
+			className='h-screen w-full right-side fixed md:flex md:w-1/4 overflow-hidden bg-gray-800 shadow-md flex flex-row'>
 			<div className='w-1/2 relative'>
 				<div className='nav-bar absolute text-2xl pl-16'>
 					<ul className=''>
@@ -60,7 +61,7 @@ function RightSide(props) {
 									e.preventDefault();
 									props.setActive(2);
 								}}>
-								Work
+								Projects
 							</a>
 						</li>
 						<li
@@ -76,7 +77,7 @@ function RightSide(props) {
 								Experience
 							</a>
 						</li>
-						<li
+						{/* <li
 							className={
 								listStyle + (props.active == 4 ? 'active' : '')
 							}>
@@ -88,7 +89,7 @@ function RightSide(props) {
 								}}>
 								Achivements
 							</a>
-						</li>
+						</li> */}
 						<li
 							className={
 								listStyle + (props.active == 5 ? 'active' : '')
@@ -99,7 +100,7 @@ function RightSide(props) {
 									e.preventDefault();
 									props.setActive(5);
 								}}>
-								Get In Touch
+								Contact
 							</a>
 						</li>
 					</ul>

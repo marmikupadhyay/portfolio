@@ -11,6 +11,9 @@ function Middle(props) {
 	const styles = {
 		body: {
 			background: theme.background.dark.secondary,
+			marginLeft: '25%',
+			height: 'auto',
+			minHeight: '100vh',
 		},
 	};
 	const returnActive = () => {
@@ -32,9 +35,7 @@ function Middle(props) {
 		}
 	};
 	return (
-		<div
-			style={styles.body}
-			className='md:h-screen w-full md:w-1/2 md:overflow-hidden'>
+		<div style={styles.body} className='md:h-screen middle w-full md:w-1/2'>
 			{returnActive()}
 		</div>
 	);

@@ -16,7 +16,7 @@ function LeftSide(props) {
 	return (
 		<div
 			style={styles.body}
-			className='h-screen w-full md:w-1/4 bg-gray-800 overflow-hidden shadow-lg flex flex-col items-center justify-center'>
+			className='h-screen w-full left-side fixed md:w-1/4 bg-gray-800 overflow-hidden shadow-lg flex flex-col items-center justify-center'>
 			<div className='head'>
 				<div className='text-5xl font-light border-t-2 text-center flex flex-col items-center border-b-2 py-5 border-white tracking-wider mx-8'>
 					<img src={dp} className='w-2/3 my-6' alt='Profile' />
